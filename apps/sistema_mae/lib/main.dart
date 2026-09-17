@@ -35,32 +35,40 @@ class MenuPrincipal extends StatelessWidget {
         title: const Text('Sistema Mãe'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
           children: [
-            const Text(
-              'Bem-vindo ao Super App!',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              child: const Text(
+                'Menu de Módulos',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
             ),
-            const SizedBox(height: 40),
-            ElevatedButton.icon(
-              icon: const Icon(Icons.fitness_center),
-              label: const Text('Acessar Módulo Academia'),
-              style: ElevatedButton.styleFrom(minimumSize: const Size(250, 50)),
-              onPressed: () {
+            ListTile(
+              leading: const Icon(Icons.fitness_center),
+              title: const Text('Academia'),
+              onTap: () {
+                // Fecha o sidebar antes de navegar
+                Navigator.pop(context);
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const AcademiaScreen()),
                 );
               },
             ),
-            const SizedBox(height: 20),
-            ElevatedButton.icon(
-              icon: const Icon(Icons.account_balance),
-              label: const Text('Acessar Módulo Banco'),
-              style: ElevatedButton.styleFrom(minimumSize: const Size(250, 50)),
-              onPressed: () {
+            ListTile(
+              leading: const Icon(Icons.account_balance),
+              title: const Text('Banco'),
+              onTap: () {
+                // Fecha o sidebar antes de navegar
+                Navigator.pop(context);
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const BancoScreen()),
@@ -70,6 +78,24 @@ class MenuPrincipal extends StatelessWidget {
           ],
         ),
       ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/Foto1.jpg',
+              width: 250,
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'Bem-vindo ao App!\nAcessar os módulos pelo menu lateral.',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
+
