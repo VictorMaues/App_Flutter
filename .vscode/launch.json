@@ -1,0 +1,125 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "meu_primeiro_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "meu_primeiro_app (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "meu_primeiro_app (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "sistema_mae",
+            "cwd": "apps/sistema_mae",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "sistema_mae (profile mode)",
+            "cwd": "apps/sistema_mae",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "sistema_mae (release mode)",
+            "cwd": "apps/sistema_mae",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "core_network",
+            "cwd": "core/core_network",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "core_network (profile mode)",
+            "cwd": "core/core_network",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "core_network (release mode)",
+            "cwd": "core/core_network",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "core_ui",
+            "cwd": "core/core_ui",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "core_ui (profile mode)",
+            "cwd": "core/core_ui",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "core_ui (release mode)",
+            "cwd": "core/core_ui",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "academia_modulo",
+            "cwd": "modulos/academia_modulo",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "academia_modulo (profile mode)",
+            "cwd": "modulos/academia_modulo",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "academia_modulo (release mode)",
+            "cwd": "modulos/academia_modulo",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "banco_modulo",
+            "cwd": "modulos/banco_modulo",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "banco_modulo (profile mode)",
+            "cwd": "modulos/banco_modulo",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "banco_modulo (release mode)",
+            "cwd": "modulos/banco_modulo",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+name: meu_projeto_monorepo
+
+packages:
+  - apps/*
+  - modulos/*
+  - core/*
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
