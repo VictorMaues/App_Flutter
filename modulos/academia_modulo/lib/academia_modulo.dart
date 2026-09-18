@@ -41,6 +41,7 @@ class _AcademiaScreenState extends State<AcademiaScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        heroTag: 'academia_fab',
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         backgroundColor: Colors.orange,

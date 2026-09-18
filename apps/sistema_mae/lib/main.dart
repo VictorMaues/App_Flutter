@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-// No mundo real, os módulos exporiam suas próprias telas ou rotas (ex: AcademiaApp, BancoApp)
-// Aqui estamos importando-os apenas para mostrar a dependência
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:academia_modulo/academia_modulo.dart';
 import 'package:banco_modulo/banco_modulo.dart';
 
@@ -15,9 +13,10 @@ class SistemaMae extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Super App Mãe',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromRGBO(103, 58, 183, 1)),
         useMaterial3: true,
       ),
       home: const MenuPrincipal(),
@@ -32,7 +31,18 @@ class MenuPrincipal extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sistema Mãe'),
+        title: Row(
+          children: [
+            // O Flutter nativamente não compila SVG. Precisamos usar o SvgPicture
+            SvgPicture.asset(
+              'assets/images/Group.svg',
+              height: 40, // Ajuste a altura conforme necessário
+              placeholderBuilder: (BuildContext context) => const Icon(Icons.image, size: 30),
+            ),
+            const SizedBox(width: 10), // Espaçamento entre a imagem e o texto
+            const Text('Sistema Mãe'),
+          ],
+        ),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       drawer: Drawer(
@@ -95,6 +105,18 @@ class MenuPrincipal extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: const BottomAppBar(
+        color: Color.fromRGBO(103, 58, 183, 1),
+        shape: CircularNotchedRectangle(),
+        notchMargin: 6.0,
+        child: SizedBox(height: 50.0), // Substitua 'bottomAppButton' pelo seu widget
+      ),
+      floatingActionButton: FloatingActionButton(
+        heroTag: 'main_fab',
+        onPressed: () {}, // Substitua 'onPress' pela sua função
+        child: const Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

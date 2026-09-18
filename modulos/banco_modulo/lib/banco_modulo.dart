@@ -41,6 +41,7 @@ class _BancoScreenState extends State<BancoScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        heroTag: 'banco_fab',
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         backgroundColor: Colors.blue,
